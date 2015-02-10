@@ -23,5 +23,23 @@ http://www.oschina.net/news/24321/rubygems-taobao-mirror
 
 DevKit  版本对应 ruby  
 http://rubyinstaller.org/downloads/
+
+
+
+启动jetyll,切到项目路径
+$ jekyll serve
+新增一篇文章
+$ rake post title="Hello World"
+新增一个页面
+创建一个简单的页面
+
+$ rake page name="about.md"
+创建一个嵌套页面
+
+$ rake page name="pages/about.md"
+创建一个带路径的页面
+
+$ rake page name="pages/about"
+# this will create the file: ./pages/about/index.html
 ---
 
