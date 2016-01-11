@@ -3,7 +3,7 @@ layout: post
 title: "JAVA — abstract class & interface"
 description: ""
 category: 
-tags: []
+tags: [java]
 ---
 {% include JB/setup %}
 

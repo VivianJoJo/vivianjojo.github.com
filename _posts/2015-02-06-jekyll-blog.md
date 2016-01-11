@@ -3,7 +3,7 @@ layout: post
 title: "Jekyll + GitHub pages 搭建blog"
 description: ""
 category: 
-tags: []
+tags: [jekyll]
 ---
 
 
@@ -16,12 +16,13 @@ tags: []
 
 ####1.安装ruby环境
 输入命令:
-    ruby --version
+    `ruby --version`
 
     ➜  vivianyu.github.com git:(master) ✗ ruby --version
     ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
 
 Mac已经自带Ruby,需确认下版本,确保版本在1.9.3或者2.0.0
+
 
 ####2.安装Bundler管理器
 
@@ -55,6 +56,7 @@ Bundler是一个包管理器，如果你想要在本地环境中预览GitHub Pag
     Successfully installed bundler-1.11.2
     1 gem installed
 
+
 ####3.安装Jekyll
 
 在当前仓库中新建一个名位 Gemfile 的文件,在其中添加两行:
@@ -63,18 +65,21 @@ Bundler是一个包管理器，如果你想要在本地环境中预览GitHub Pag
     gem ‘github-pages’
 
 然后输入命令:
-    bundle install
+
+`bundle install`
 
 这样Jekyll就算安装好了，文件夹下也多了一个Gemfile.lock文件。
+
 
 运行Jekyll
 --------------
 
 安装完Bundler后,命令行中输入:
 
-    bundle exec jekyll serve
+`bundle exec jekyll serve`
 
 就可以在本地将Jekyll跑起来了，这时你可以通过访问 http://localhost:4000 来预览你的GitHub Pages。
+
 
 新建page
 --------------
@@ -99,6 +104,8 @@ this will create the file: ./pages/about/index.html
 ------------------------------------
 
 *小记: 此笔记更新于2016/01/11,于Mac上重新使用Jekyll.*
+
+*vivian.yu*
 
 ---
 
