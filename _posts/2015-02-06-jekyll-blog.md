@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll + GitHub pages 搭建blog"
+title: "Jekyll — GitHub Pages 搭建blog"
 description: ""
 category: Blog搭建
 tags: [Jekyll]
@@ -34,7 +34,7 @@ Bundler是一个包管理器，如果你想要在本地环境中预览GitHub Pag
     ERROR:  Could not find a valid gem 'bundler' (>= 0), here is why:
               Unable to download data from https://rubygems.org/ - Errno::ECONNRESET: Connection reset by peer - SSL_connect (https://rubygems.org/latest_specs.4.8.gz)
 
-报错是因为是因为国内网络导致rubygems.org存放在Amazon S3上面的资源文件间歇性连接失败，用国内的RubyGems镜像(参见http://ruby.taobao.org/)替换官方镜像，方法如下：
+报错是因为是因为国内网络导致rubygems.org存放在Amazon S3上面的资源文件间歇性连接失败，用国内的RubyGems镜像(参见[http://ruby.taobao.org/](http://ruby.taobao.org/))替换官方镜像，方法如下：
 
     ➜  vivianyu.github.com git:(master) ✗ gem install bundler --no-ri --no-rdoc --source http://rubygems.org
     ^CERROR:  Interrupted
@@ -78,7 +78,7 @@ Bundler是一个包管理器，如果你想要在本地环境中预览GitHub Pag
 
 `bundle exec jekyll serve`
 
-就可以在本地将Jekyll跑起来了，这时你可以通过访问 http://localhost:4000 来预览你的GitHub Pages。
+就可以在本地将Jekyll跑起来了，这时你可以通过访问 [http://localhost:4000](http://localhost:4000) 来预览你的GitHub Pages。
 
 
 新建page
