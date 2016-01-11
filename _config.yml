@@ -12,8 +12,8 @@ title : Home
 tagline: Site Tagline
 author : 
   name : vivian.yu
-  email : vivian.yu@corp.vipshop.com
-  github : VivianJoJo
+  email : vivian.yu@dianping.com
+  github : Vivian2yu
   twitter : username
   feedburner : feedname
 
@@ -26,7 +26,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://vivianjojo.github.io
+production_url : http://vivianyu.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
