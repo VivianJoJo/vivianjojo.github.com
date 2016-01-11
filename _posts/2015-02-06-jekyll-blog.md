@@ -2,8 +2,8 @@
 layout: post
 title: "Jekyll + GitHub pages 搭建blog"
 description: ""
-category: 
-tags: [jekyll]
+category: Blog搭建
+tags: [Jekyll]
 ---
 
 

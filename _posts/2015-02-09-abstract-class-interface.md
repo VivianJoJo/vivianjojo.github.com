@@ -2,8 +2,8 @@
 layout: post
 title: "JAVA — abstract class & interface"
 description: ""
-category: 
-tags: [java]
+category: Java基础
+tags: [Java]
 ---
 {% include JB/setup %}
 

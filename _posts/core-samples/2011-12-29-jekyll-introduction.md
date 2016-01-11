@@ -1,8 +1,8 @@
 ---
 layout: post
-category : lessons
+category : Blog搭建
 tagline: "Supporting tagline"
-tags : [jekyll]
+tags : [Jekyll]
 ---
 {% include JB/setup %}
 
