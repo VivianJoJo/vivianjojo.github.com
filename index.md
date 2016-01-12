@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 主页
+title: Ducks to Water
 tagline: 
 ---
 {% include JB/setup %}
