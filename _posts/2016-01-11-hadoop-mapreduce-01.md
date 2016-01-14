@@ -117,4 +117,55 @@ tags: [Hadoop, MapReduce]
 
 `~/woft/hadoop-1.2.1/bin/hadoop jar wordcount.jar WordCount input output`
 
+代码数据流
+-----------------
+
+JobTracker将Job的输入文件分隔到每个Task上,假设现在有两个Map Task,一个Map Task文件.
+
+接下来MapReduce启动Job,每个Map Task在启动之后会接收到自己所分配的数据,两个Map Task的输入数据如下:
+
+    <0, "hello world">
+    <0, "hello hadoop">
+    <14, "hello MapReduce">
+
+Map函数会对输入内容进行分隔,输出每个单词及词频,第一个Map输出如下:
+
+    <"hell0", 1>
+    <"world", 1>
+
+第二个Map输出如下:
+
+    <"hello", 1>
+    <"hadoop", 1>
+    <"hello", 1>
+    <"mapreduce", 1>
+
+Combiner将结果局部合并,降低网络压力,提高效率,执行Combiner后,两个Map Task输出如下:
+
+Map Task1
+
+    <"hello", 1>
+    <"world", 1>
+
+Map Task2
+
+    <"hello", 2>
+    <"hadoop", 1>
+    <"mapreduce", 1>
+
+接下里是MapReduce的shuffle过程,Map的输出进行排序合并,并根据Reduce数量对Map的输出进行分割,将结果交给对应的Reduce.
+经过shuffle过程额输出也就是Reduce的输入如下:
+
+    <"hadoop", 1>
+    <"hello", <1,2>>
+    <"mapreduce", 1>
+    <"world", 1>
+
+Reduce接收到输入后,对每个<key, value-list>进行处理,形成整个MapReduce的输出,如下:
+
+    <"hadoop", 1>
+    <"hello",  3>
+    <"mapreduce", 1>
+    <"world", 1>
+
 ----------------------------
