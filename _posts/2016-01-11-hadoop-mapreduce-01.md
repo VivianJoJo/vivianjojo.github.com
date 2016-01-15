@@ -105,6 +105,10 @@ tags: [Hadoop, MapReduce]
 
 `~/woft/hadoop-1.2.1/bin/hadoop dfs -mkdir input`
 
+查看创建的hdfs文件
+
+`~/woft/hadoop-1.2.1/bin/hadoop dfs -ls`
+
 本地创建输入文件
 
 `mkdir input; file01 file02`
@@ -125,6 +129,7 @@ JobTracker将Job的输入文件分隔到每个Task上,假设现在有两个Map T
 接下来MapReduce启动Job,每个Map Task在启动之后会接收到自己所分配的数据,两个Map Task的输入数据如下:
 
     <0, "hello world">
+
     <0, "hello hadoop">
     <14, "hello MapReduce">
 
